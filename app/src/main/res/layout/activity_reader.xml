@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/readerRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_parchment_bg">
+
+    <!-- High Performance Native Canvas View -->
+    <com.vibecoding.aireading.ui.view.ReaderCanvasView
+        android:id="@+id/readerCanvasView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Top Floating Capsule -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/bg_floating_capsule"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="6dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="返回"
+            android:src="@drawable/ic_back"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingHorizontal="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddToShelf"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="#40FFFFFF"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="0dp"
+            android:text="📥 入架"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:cornerRadius="17dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVoiceSelect"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="#33FFFFFF"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="0dp"
+            android:text="🐉 奶龙"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:cornerRadius="17dp"
+            app:strokeColor="#4DFFFFFF"
+            app:strokeWidth="1dp" />
+
+        <ImageButton
+            android:id="@+id/btnToc"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="目录"
+            android:src="@drawable/ic_menu"
+            app:tint="@android:color/white" />
+
+        <ImageButton
+            android:id="@+id/btnCloseBars"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="收起"
+            android:src="@drawable/ic_close"
+            app:tint="@android:color/white" />
+
+    </LinearLayout>
+
+    <!-- Bottom Floating Dock -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_floating_capsule"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Sentence indicator with Live SoundWave -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.vibecoding.aireading.ui.view.SoundWaveView
+                android:id="@+id/liveSoundWave"
+                android:layout_width="22dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvCurrentSentence"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#FBBF24"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- Chapter progress slider with manual page buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPrevPage"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:insetBottom="0dp"
+                android:insetTop="0dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="0dp"
+                android:text="◀ 上页"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <SeekBar
+                android:id="@+id/seekProgress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:progressTint="@color/accent_amber"
+                android:thumbTint="@color/accent_amber" />
+
+            <Button
+                android:id="@+id/btnNextPage"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:insetBottom="0dp"
+                android:insetTop="0dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="0dp"
+                android:text="下页 ▶"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Playback Controls -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnPrevSentence"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginEnd="20dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/prev_sentence"
+                android:src="@drawable/ic_skip_prev"
+                app:tint="@android:color/white" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnPlayPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/play"
+                android:src="@drawable/ic_play"
+                app:backgroundTint="@color/accent_amber"
+                app:elevation="4dp"
+                app:fabSize="normal"
+                app:tint="@color/primary" />
+
+            <ImageButton
+                android:id="@+id/btnNextSentence"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="20dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/next_sentence"
+                android:src="@drawable/ic_skip_next"
+                app:tint="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/btnStop"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/stop"
+                android:src="@drawable/ic_stop"
+                app:tint="#9CA3AF" />
+
+        </LinearLayout>
+
+        <!-- Typography & 4 Reading Themes row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFontDec"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:insetBottom="0dp"
+                android:insetTop="0dp"
+                android:padding="0dp"
+                android:text="A-"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvFontSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:text="20"
+                android:textColor="@color/text_tertiary"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnFontInc"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:insetBottom="0dp"
+                android:insetTop="0dp"
+                android:padding="0dp"
+                android:text="A+"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- 4 Theme circles -->
+            <View
+                android:id="@+id/themeParchment"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/ic_stop"
+                android:backgroundTint="@color/theme_parchment_bg" />
+
+            <View
+                android:id="@+id/themeGreen"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/ic_stop"
+                android:backgroundTint="@color/theme_green_bg" />
+
+            <View
+                android:id="@+id/themeNight"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/ic_stop"
+                android:backgroundTint="@color/theme_night_bg" />
+
+            <View
+                android:id="@+id/themeWhite"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="@drawable/ic_stop"
+                android:backgroundTint="@color/theme_white_bg" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

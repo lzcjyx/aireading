@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Glowing Equalizer / Soundwaves Emerging from Book -->
+    <!-- Left Equalizer bars -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M40,42h3v-10h-3z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M46,42h3v-16h-3z" />
+    <!-- Center Equalizer bar -->
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M52.5,42h3v-21h-3z" />
+    <!-- Right Equalizer bars -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M59,42h3v-16h-3z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M65,42h3v-10h-3z" />
+
+    <!-- Open Book Left Page -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M53,46c-7,-3.5 -16,-3 -23,0v24c7,-3 16,-3.5 23,0z" />
+    <!-- Open Book Right Page -->
+    <path
+        android:fillColor="#FAF5EE"
+        android:pathData="M55,46c7,-3.5 16,-3 23,0v24c-7,-3 -16,-3.5 -23,0z" />
+
+    <!-- Spine / Middle ribbon -->
+    <path
+        android:fillColor="#D4AF37"
+        android:pathData="M53,46h2v25h-2z" />
+
+    <!-- Lines on Left Page -->
+    <path
+        android:fillColor="#D1D5DB"
+        android:pathData="M34,51h14v2h-14z" />
+    <path
+        android:fillColor="#D1D5DB"
+        android:pathData="M34,56h14v2h-14z" />
+    <path
+        android:fillColor="#D1D5DB"
+        android:pathData="M34,61h10v2h-10z" />
+
+    <!-- Lines on Right Page -->
+    <path
+        android:fillColor="#D1D5DB"
+        android:pathData="M60,51h14v2h-14z" />
+    <path
+        android:fillColor="#D1D5DB"
+        android:pathData="M60,56h14v2h-14z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M60,61h11v2h-11z" />
+</vector>

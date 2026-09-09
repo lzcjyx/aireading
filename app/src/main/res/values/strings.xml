@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">AI小说听书</string>
+    <string name="bookshelf">我的书架</string>
+    <string name="import_book">导入本地小说</string>
+    <string name="sample_book_title">灵界行纪（内置试听小说）</string>
+    <string name="sample_book_author">龙狗奇谭</string>
+    <string name="chapter_list">目录</string>
+    <string name="voice_settings">AI音色设置</string>
+    <string name="voice_nailong">奶龙 (魔性幼萌童音)</string>
+    <string name="voice_dagou">大狗 (粗犷低沉老铁音)</string>
+    <string name="voice_custom">自定义 GPT-SoVITS / API</string>
+    <string name="voice_system">系统原生离线 TTS</string>
+    <string name="speed">语速</string>
+    <string name="pitch">语调</string>
+    <string name="preview_voice">试听音色</string>
+    <string name="reading_service_channel">小说听书播放服务</string>
+    <string name="reading_service_desc">用于在后台及熄屏状态下持续播放小说语音</string>
+    <string name="stop">停止</string>
+    <string name="pause">暂停</string>
+    <string name="play">播放</string>
+    <string name="prev_sentence">上一句</string>
+    <string name="next_sentence">下一句</string>
+</resources>

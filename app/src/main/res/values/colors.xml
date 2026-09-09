@@ -1,0 +1,53 @@
+<resources>
+    <!-- Brand & Accent Colors: Champagne Gold & Obsidian -->
+    <color name="primary">#1A1C20</color>
+    <color name="primary_dark">#101114</color>
+    <color name="accent">#F59E0B</color>
+    <color name="accent_gold">#D4AF37</color>
+    <color name="accent_amber">#F59E0B</color>
+    <color name="accent_amber_light">#FEF3C7</color>
+
+    <!-- Surfaces & Neutrals -->
+    <color name="background_light">#F8F9FA</color>
+    <color name="surface_card">#FFFFFF</color>
+    <color name="surface_card_subtle">#F3F4F6</color>
+    <color name="text_primary">#111827</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_tertiary">#9CA3AF</color>
+    <color name="divider">#E5E7EB</color>
+    <color name="divider_dark">#26282E</color>
+
+    <!-- Floating Dock & Glassmorphism -->
+    <color name="floating_dock_bg">#EB1A1C22</color>
+    <color name="floating_dock_stroke">#26FFFFFF</color>
+
+    <!-- 4 Professional Reading Themes -->
+    <!-- 1. 羊绒柔光 (Cashmere Amber) -->
+    <color name="theme_parchment_bg">#F6F1E7</color>
+    <color name="theme_parchment_text">#2B2520</color>
+    <color name="theme_parchment_highlight">#35F59E0B</color>
+
+    <!-- 2. 极夜黑曜 (Obsidian OLED) -->
+    <color name="theme_night_bg">#0F1012</color>
+    <color name="theme_night_text">#D1D5DB</color>
+    <color name="theme_night_highlight">#35FBBF24</color>
+
+    <!-- 3. 竹青静心 (Bamboo Jade) -->
+    <color name="theme_green_bg">#E9F2EA</color>
+    <color name="theme_green_text">#1E3120</color>
+    <color name="theme_green_highlight">#3510B981</color>
+
+    <!-- 4. 晨雾素白 (Morning Fog) -->
+    <color name="theme_white_bg">#FFFFFF</color>
+    <color name="theme_white_text">#1F2937</color>
+    <color name="theme_white_highlight">#35E5E7EB</color>
+
+    <!-- Role Voice Colors -->
+    <color name="nailong_gold">#F59E0B</color>
+    <color name="nailong_bg">#FFFBEB</color>
+    <color name="nailong_border">#FDE68A</color>
+
+    <color name="dagou_bronze">#854D0E</color>
+    <color name="dagou_bg">#FEFCE8</color>
+    <color name="dagou_border">#FEF08A</color>
+</resources>
